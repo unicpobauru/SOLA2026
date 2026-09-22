@@ -1,11 +1,11 @@
 import { Check } from "lucide-react";
 import { Container } from "../components/ui/Container";
 import { LeadForm } from "../components/ui/LeadForm";
-import { FlagBadge } from "../components/ui/FlagBadge";
+import { BrazilFlag } from "../components/ui/BrazilFlag";
 
 const heroPoints = [
   "Nuevos conocimientos, nuevas posibilidades para tu carrera",
-  "Sorteo de becas para estudiar en Brasil y Perú",
+  "Sorteo de becas para estudiar en Brasil",
   "Registro rápido y gratis — solo tus datos",
 ];
 
@@ -122,13 +122,13 @@ export function Hero() {
               style={{ fontSize: "clamp(1.95rem, 1.35rem + 2.9vw, 3.4rem)" }}
             >
               Inscríbete y participa en el sorteo de{" "}
-              <span className="text-brand-300">becas para estudiar en Brasil y Perú</span>.
+              <span className="text-brand-300">becas para estudiar en Brasil</span>.
             </h1>
 
             <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.06] py-1.5 pl-1.5 pr-3.5">
-              <FlagBadge className="h-5 w-8 shrink-0" />
+              <BrazilFlag className="h-5 w-8 shrink-0" />
               <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-white/75">
-                Becas Perú + Brasil
+                Beca para estudiar en Brasil
               </span>
             </div>
 

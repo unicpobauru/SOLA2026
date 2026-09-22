@@ -1,9 +1,10 @@
 # LP — Sorteo de becas UniCPO · SOLA Lima 2026
 
 Landing page de una sola pantalla para captar registros al **sorteo de becas para
-estudiar en Brasil y Perú**, en el marco de la **XII Cumbre Internacional SOLA Lima 2026**
-(Faculdade UniCPO). Los datos del formulario se envían a una **Hoja de cálculo de Google**
-vía Apps Script.
+estudiar en Brasil**, en el marco de la **XII Cumbre Internacional SOLA Lima 2026**
+(Faculdade UniCPO). El evento es en Lima, Perú — la beca es únicamente para estudiar
+en Brasil. Los datos del formulario se envían a una **Hoja de cálculo de Google** vía
+Apps Script.
 
 Stack: React + TypeScript + Tailwind CSS v4 + Vite. Es un **fork temático** de la LP
 `EXPODENTAL_ECUADOR` (mismo diseño y mismo formulario) — ver ese repo para el histórico
@@ -40,13 +41,13 @@ npm run deploy     # build + publica en gh-pages  (GitHub Pages ~1 min en actual
 - `src/sections/Header.tsx` — logo UniCPO (blanco) fijo arriba.
 - `src/sections/Hero.tsx` — degradado azul, capa de decoraciones (`<Decorations/>`:
   marcas de registro, chevrons, círculo cian, puntos), foto de graduados, logo de
-  SOLA junto al eyebrow, chip de banderas Perú + Brasil (`<FlagBadge/>`) y la
-  **tarjeta de formulario** (`id="formulario"`).
+  SOLA junto al eyebrow, chip con la bandera de Brasil (`<BrazilFlag/>`, la beca es
+  solo para Brasil) y la **tarjeta de formulario** (`id="formulario"`).
 - `src/sections/Footer.tsx` — logo UniCPO, logo XII Cumbre SOLA Lima 2026, copyright.
 - `src/components/ui/LeadForm.tsx` + `PhoneField.tsx` — nombre, teléfono con selector
-  de DDI (país por defecto: **Perú +51**), correo, ¿odontólogo?
-- `src/components/ui/FlagBadge.tsx` — insignia con la bandera de Perú y la de Brasil
-  lado a lado (no una bandera inventada — las dos reales en una misma placa).
+  de DDI (país por defecto: **Perú +51**, porque el evento es en Lima — no tiene relación
+  con el destino de la beca), correo, ¿odontólogo?
+- `src/components/ui/BrazilFlag.tsx` — bandera de Brasil en una placa redondeada.
 - `src/lib/leadForm.ts` — **`GOOGLE_SCRIPT_URL`** (ver aviso arriba). Cada dato se manda
   bajo varias claves (nombre/nombreCompleto/name, etc.) para caer en la columna correcta
   sea cual sea el nombre del parámetro que espera el script. Envío `no-cors` (la respuesta
