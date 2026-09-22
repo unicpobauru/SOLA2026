@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+  /* Paleta UniCPO — azul marino profundo + cian */
+  --color-ink: #0a1f4a;
+  --color-ink-800: #123a86;
+  --color-ink-900: #061024;
+  --color-paper: #ffffff;
+  --color-soft: #f2f4f8;
+  --color-soft-200: #e2e6ee;
+  --color-line: #e2e6ee;
+
+  /* Cian de marca (círculos, palabras destacadas, botones) */
+  --color-brand-200: #a9dcf5;
+  --color-brand-300: #7cc9ef;
+  --color-brand-400: #29abe2;
+  --color-brand-500: #1c8fc6;
+  --color-brand-600: #1573a4;
+
+  /* Alias dorados heredados — sin uso, se mantienen para no romper componentes */
+  --color-gold-50: #faf5e6;
+  --color-gold-200: #a9dcf5;
+  --color-gold-400: #29abe2;
+  --color-gold-500: #1c8fc6;
+  --color-gold-600: #1573a4;
+  --color-gold-700: #10597f;
+
+  --shadow-card: 0 1px 2px rgba(5, 11, 22, 0.06), 0 12px 32px -12px rgba(5, 11, 22, 0.18);
+  --shadow-card-hover: 0 4px 10px rgba(5, 11, 22, 0.09), 0 24px 48px -16px rgba(5, 11, 22, 0.28);
+  --shadow-panel: 0 30px 80px -24px rgba(4, 10, 30, 0.6);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-paper antialiased;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-brand-400);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .container-xl {
+    @apply mx-auto w-full max-w-[1216px] px-6 sm:px-8 lg:px-10;
+  }
+
+  .container-lg {
+    @apply mx-auto w-full max-w-[980px] px-6 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.22em] text-brand-300;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
