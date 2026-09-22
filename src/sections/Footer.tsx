@@ -36,7 +36,18 @@ export function Footer() {
     >
       <Container>
         <div className="flex flex-col items-center gap-5 border-b border-white/10 pb-10 text-center">
-          <img src="images/logo-unicpo.png" alt="Faculdade UniCPO" className="h-9 w-auto" />
+          <div className="flex items-center justify-center gap-5">
+            <img src="images/logo-unicpo.png" alt="Faculdade UniCPO" className="h-10 w-auto sm:h-11" />
+            <span className="h-10 w-px shrink-0 bg-white/15 sm:h-11" aria-hidden />
+            <img
+              src="images/logo-sola.png"
+              alt="XII Cumbre Internacional SOLA Lima 2026"
+              className="h-14 w-auto sm:h-16"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.display = "none";
+              }}
+            />
+          </div>
           <p className="max-w-[440px] text-[13.5px] leading-relaxed text-white/55">
             El conocimiento que transforma tu carrera. Formación especializada, experiencia
             práctica y docentes que inspiran nuevas posibilidades.
@@ -48,14 +59,6 @@ export function Footer() {
             <PenLine className="h-4 w-4 shrink-0" strokeWidth={1.75} />
             Quiero participar del sorteo
           </a>
-          <img
-            src="images/logo-sola.png"
-            alt="XII Cumbre Internacional SOLA Lima 2026"
-            className="mt-2 h-16 w-auto"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).style.display = "none";
-            }}
-          />
 
           <div className="mt-3 flex flex-col items-center gap-2.5">
             <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/45">
