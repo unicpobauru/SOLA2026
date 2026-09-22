@@ -100,7 +100,7 @@ export function Hero() {
       <Decorations />
 
       <Container className="relative z-10 flex min-h-[600px] flex-col justify-center py-24 pt-28 sm:min-h-[92svh] sm:py-28 sm:pt-32 lg:min-h-[720px]">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           {/* columna de texto */}
           <div className="flex max-w-[600px] flex-col gap-6">
             <div className="flex items-center gap-3">
