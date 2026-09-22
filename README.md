@@ -12,7 +12,7 @@ del diseño original.
 
 ## En vivo
 
-- **URL (para el QR):** https://unicpobauru.github.io/SOLA_LIMA2026/
+- **URL (para el QR):** https://unicpobauru.github.io/SOLA2026/
 - Publica desde la rama **`gh-pages`** (contenido de `dist/`). El código fuente está en **`main`**.
 
 ## ⚠️ Importante: mismo Google Apps Script que Expodental Ecuador
@@ -28,7 +28,7 @@ del nuevo Apps Script y la cambio en un minuto.
 
 ```bash
 npm install
-npm run dev        # http://localhost:5173/SOLA_LIMA2026/
+npm run dev        # http://localhost:5173/SOLA2026/
 npm run build      # dist/
 npm run preview    # sirve el build localmente
 npm run deploy     # build + publica en gh-pages  (GitHub Pages ~1 min en actualizar)
@@ -66,9 +66,8 @@ Si una imagen falta, el elemento se oculta y queda el degradado — no rompe la 
 
 ## Pendiente / a revisar
 
-- **Crear el repo `SOLA_LIMA2026` en GitHub** (owner `unicpobauru`, vacío, público) antes
-  del primer `git push` / `npm run deploy` — a diferencia de Expodental Ecuador, este repo
-  todavía no existía.
 - **Confirmar si la planilla debe ser la misma o una nueva** (ver aviso arriba).
-- Hacer un registro de prueba y confirmar en qué columnas cayó cada campo.
 - **Textos legales:** el enlace "Política de Privacidad" del footer apunta a `#`.
+- Nota: el repo en GitHub se llama **`SOLA2026`** (no `SOLA_LIMA2026`) — el nombre de la
+  carpeta local del proyecto quedó con el nombre original, pero no afecta nada (el `base`
+  de `vite.config.ts` y todas las URLs ya apuntan a `SOLA2026`).

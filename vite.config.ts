@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/SOLA_LIMA2026/',
+  base: '/SOLA2026/',
   plugins: [react(), tailwindcss()],
 })
