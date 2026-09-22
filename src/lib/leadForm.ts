@@ -7,9 +7,13 @@
  * interfaz (muestra "registro recibido") pero NO envía datos a ningún lado.
  */
 
-/** URL de implementación ("Web app") del Google Apps Script del cliente. */
+/**
+ * URL de implementación ("Web app") del Google Apps Script del cliente.
+ * Planilla dedicada a SOLA Lima 2026 (independiente de la de Expodental
+ * Ecuador).
+ */
 export const GOOGLE_SCRIPT_URL: string | null =
-  "https://script.google.com/macros/s/AKfycbzElfLuW-ioK-GMspJ7FqMvtc4e3h5aQDa60hbYCCLzNPBSZwOEFmqcRae9SgD4vi0r5Q/exec";
+  "https://script.google.com/macros/s/AKfycbxfFLV8e4fIhukMmo3_c-v0j0S6dDV6FjWPMT-TpYr7qCQrheCVbl3rg913HZ8cl24g/exec";
 
 /** Etiqueta fija que viaja en CADA fila (columna "Tag"), fuera del formulario. */
 const LEAD_TAG = "[LP-SORTEO-BECAS-SOLA-LIMA26]";

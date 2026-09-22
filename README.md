@@ -15,14 +15,13 @@ del diseño original.
 - **URL (para el QR):** https://unicpobauru.github.io/SOLA2026/
 - Publica desde la rama **`gh-pages`** (contenido de `dist/`). El código fuente está en **`main`**.
 
-## ⚠️ Importante: mismo Google Apps Script que Expodental Ecuador
+## Google Apps Script / planilla
 
-`src/lib/leadForm.ts` apunta al **mismo `GOOGLE_SCRIPT_URL`** (misma Hoja de cálculo) que
-la LP de Expodental Ecuador — se mantuvo así a propósito ("el formulario sigue igual").
-Los registros de ambas campañas van a **la misma planilla**, diferenciados por la columna
-`Tag` (`[LP-SORTEO-BECAS-SOLA-LIMA26]` acá vs. `[LP-SORTEO-BECAS-EC]` en Ecuador) y por
-`Origem`. Si preferís una planilla o pestaña separada para SOLA Lima 2026, pasame la URL
-del nuevo Apps Script y la cambio en un minuto.
+`src/lib/leadForm.ts` apunta a su **propio `GOOGLE_SCRIPT_URL`**, con una Hoja de
+cálculo dedicada a SOLA Lima 2026 (ya no comparte planilla con Expodental Ecuador).
+El envío sigue funcionando igual que en el sitio original: `POST` `no-cors` con cada
+dato mandado bajo varias claves (nombre/nombreCompleto/name, etc.) para caer en la
+columna correcta sea cual sea el nombre exacto que espere el script.
 
 ## Comandos
 
@@ -48,10 +47,11 @@ npm run deploy     # build + publica en gh-pages  (GitHub Pages ~1 min en actual
   de DDI (país por defecto: **Perú +51**, porque el evento es en Lima — no tiene relación
   con el destino de la beca), correo, ¿odontólogo?
 - `src/components/ui/BrazilFlag.tsx` — bandera de Brasil en una placa redondeada.
-- `src/lib/leadForm.ts` — **`GOOGLE_SCRIPT_URL`** (ver aviso arriba). Cada dato se manda
-  bajo varias claves (nombre/nombreCompleto/name, etc.) para caer en la columna correcta
-  sea cual sea el nombre del parámetro que espera el script. Envío `no-cors` (la respuesta
-  es opaca; la UI muestra éxito al disparar).
+- `src/lib/leadForm.ts` — **`GOOGLE_SCRIPT_URL`** (planilla propia, ver arriba). Cada
+  dato se manda bajo varias claves (nombre/nombreCompleto/name, etc.) para caer en la
+  columna correcta sea cual sea el nombre del parámetro que espera el script. Envío
+  `no-cors` (la respuesta es opaca; la UI muestra éxito al disparar — confirmar
+  igual en la planilla).
 - `src/index.css` — paleta azul/cian (`@theme`) y fuente Poppins.
 
 ## Imágenes (`public/images/`)
@@ -66,7 +66,6 @@ Si una imagen falta, el elemento se oculta y queda el degradado — no rompe la 
 
 ## Pendiente / a revisar
 
-- **Confirmar si la planilla debe ser la misma o una nueva** (ver aviso arriba).
 - **Textos legales:** el enlace "Política de Privacidad" del footer apunta a `#`.
 - Nota: el repo en GitHub se llama **`SOLA2026`** (no `SOLA_LIMA2026`) — el nombre de la
   carpeta local del proyecto quedó con el nombre original, pero no afecta nada (el `base`
